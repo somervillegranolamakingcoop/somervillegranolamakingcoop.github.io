@@ -8,7 +8,7 @@ COLUMN_FIRST_PERSON = 2
 TERMS_CSV_URL = 'http://calc.sankey.info/sgmc_start_dates.csv'
 
 # universal facts:
-TERM_LENGTH = datetime.timedelta(days=(7*12))
+TERM_LENGTH = datetime.timedelta(days=(7*4*6))
 
 class EtherCalcHelpers:
   @staticmethod
