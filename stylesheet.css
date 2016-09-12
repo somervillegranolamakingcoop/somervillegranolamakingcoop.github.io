@@ -42,3 +42,14 @@ body {
   background-color:#DCAA79;
   padding:10px 15px 10px;
 }
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+th, td {
+  border: 1px solid black;
+  padding: 3px;
+}
