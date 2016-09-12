@@ -92,9 +92,10 @@ class Terms:
     data = {}
     for row in rows:
       member = row[0]
-      if len(member) == 0: continue
-      date = EtherCalcHelpers.get_date_from_cell(row[1])
-      data[member] = date
+      if len(member) != 0:
+        date = EtherCalcHelpers.get_date_from_cell(row[1])
+        if date:
+          data[member] = date
     return data
 
   @staticmethod
