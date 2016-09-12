@@ -1,0 +1,3 @@
+to recover backups of sheets, try something like this:
+
+curl -X PUT -H 'Content-Type: text/csv' --data-binary @path/to/backup/file.csv http://calc.sankey.info/_/sgmc_start_dates

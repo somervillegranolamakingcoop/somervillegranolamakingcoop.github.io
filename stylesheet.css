@@ -1,14 +1,14 @@
 *{
-  font-family:Arial;
+  font-family: "DejaVu Sans", "Liberation Sans", sans-serif;
 }
 
 #tiny{
   font-size:12px;
 }
 
-h1{
-  font-size:46px;
-}
+h1 { font-size:16pt }
+h2 { font-size:14pt }
+h3 { font-size:12pt }
 
 html{
   height:100%;
@@ -18,12 +18,21 @@ body {
   height:100%;
   background-image:url("granola.jpg");
   background-repeat:no-repeat;
-  //background-position:0px 10px;
+  /* background-position:0px 10px; */
    background-size:2000px;
 }
 
+#title{
+  /* border:1px solid red; */
+  text-align:center;
+  display:block;
+  margin-bottom:20px;
+}
+#title h1{
+  font-size:2.5em;
+}
 #main{
-  //height:850px;
+  /* height:850px; */
   width:500px;
   display:block;
   margin-top:20px;
@@ -32,10 +41,4 @@ body {
   border-radius:10px;
   background-color:#DCAA79;
   padding:10px 15px 10px;
-}
-#title{
-  //border:1px solid red;
-  text-align:center;
-  display:block;
-  margin-bottom:50px;
 }
