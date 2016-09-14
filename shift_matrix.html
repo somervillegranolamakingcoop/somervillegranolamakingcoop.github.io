@@ -50,17 +50,21 @@ manager).</p>
   function gen_row(row) {
     var jsrow = $('<tr></tr>');
     jsrow.append('<th class="date">' + row['date'] + ' ' + row['dow'] + '</th>');
-    var row_class = 'bad';
+    var row_counter = 0;
     for (scheduled in row['shifts']) {
       cell_class = 'bad';
       cell_content = '';
-      if (parseInt(row['shifts'][scheduled], 10) >= MIN_GOOD_SHIFT) {
-        row_class = 'good';
+      if (row['shifts'][scheduled] == '1') {
         cell_class = 'good';
         cell_content = 'X';
+        row_counter += 1;
       }
       var cell = $('<td></td>').text(cell_content);
       jsrow.append(cell);
+    }
+    var row_class = 'bad';
+    if (row_counter >= MIN_GOOD_SHIFT) {
+      row_class = 'good';
     }
     jsrow.addClass(row_class);
     return jsrow;
