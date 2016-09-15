@@ -138,16 +138,24 @@ manager).</p>
         term_data['next_next_term']);
       var row = $('<tr></tr>');
       row.append($('<td></td>').text(member_name));
-      row.append($('<td></td>').text(current_term_range));
+      row.append($('<td></td>')
+         .text(current_term_range)
+         .addClass(current_term_shifts >= MIN_GOOD_TERM ? "good" : "bad")
+         );
       row.append($('<td></td>')
          .text(current_term_shifts)
          .css("text-align","center")
-         .addClass(current_term_shifts >= MIN_GOOD_TERM ? "good" : "bad"));
-      row.append($('<td></td>').text(next_term_range));
+         .addClass(current_term_shifts >= MIN_GOOD_TERM ? "good" : "bad")
+         );
+      row.append($('<td></td>')
+         .text(next_term_range)
+         .addClass(next_term_shifts >= MIN_GOOD_TERM ? "good" : "bad")
+         );
       row.append($('<td></td>')
          .text(next_term_shifts)
          .css("text-align","center")
-         .addClass(next_term_shifts >= MIN_GOOD_TERM ? "good" : "bad"));
+         .addClass(next_term_shifts >= MIN_GOOD_TERM ? "good" : "bad")
+         );
       table.append(row);
     }
   }
