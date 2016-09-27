@@ -22,7 +22,7 @@ manager).</p>
 <h3>Terms Matrix</h3>
 <table id="terms-matrix">
 <tr>
-<th rowspan="2">name</th>
+<th rowspan="2">name (shares)</th>
 <th colspan="2">current term</th>
 <th colspan="2">next term</th>
 </tr>
@@ -52,7 +52,6 @@ tr.bad, td.bad {
 <script src="/jquery.min.js"></script>
 <script>
   var MIN_GOOD_SHIFT = 2;
-  var MIN_GOOD_TERM = 2;
 
   var full_table_data;
 
@@ -133,37 +132,38 @@ tr.bad, td.bad {
   function terms_data(data) {
     var table = $("table#terms-matrix");
     for (member_idx in full_table_data['all_staff']) {
-      member_name = full_table_data['all_staff'][member_idx];
-      term_data = data[member_name];
-      current_term_range = term_data['current_term'] + ' — ' + term_data['next_term'];
-      current_term_shifts = count_shifts(
+      var member_name = full_table_data['all_staff'][member_idx];
+      var term_data = data[member_name];
+      var current_term_range = term_data['current_term'] + ' — ' + term_data['next_term'];
+      var current_term_shifts = count_shifts(
         member_name,
         term_data['current_term'],
         term_data['next_term']);
-      next_term_range = term_data['next_term'] + ' — ' + term_data['next_next_term'];
-      next_term_shifts = count_shifts(
+      var next_term_range = term_data['next_term'] + ' — ' + term_data['next_next_term'];
+      var next_term_shifts = count_shifts(
         member_name,
         term_data['next_term'],
         term_data['next_next_term']);
+      var min_good_term = Math.ceil(term_data['shares']/2);
       var row = $('<tr></tr>');
-      row.append($('<td></td>').text(member_name));
+      row.append($('<td></td>').text(member_name + ' (' + term_data['shares'] + ')'));
       row.append($('<td></td>')
          .text(current_term_range)
-         .addClass(current_term_shifts >= MIN_GOOD_TERM ? "good" : "bad")
+         .addClass(current_term_shifts >= min_good_term ? "good" : "bad")
          );
       row.append($('<td></td>')
-         .text(current_term_shifts)
+         .text(current_term_shifts + '/' + min_good_term)
          .css("text-align","center")
-         .addClass(current_term_shifts >= MIN_GOOD_TERM ? "good" : "bad")
+         .addClass(current_term_shifts >= min_good_term ? "good" : "bad")
          );
       row.append($('<td></td>')
          .text(next_term_range)
-         .addClass(next_term_shifts >= MIN_GOOD_TERM ? "good" : "bad")
+         .addClass(next_term_shifts >= min_good_term ? "good" : "bad")
          );
       row.append($('<td></td>')
-         .text(next_term_shifts)
+         .text(next_term_shifts + '/' + min_good_term)
          .css("text-align","center")
-         .addClass(next_term_shifts >= MIN_GOOD_TERM ? "good" : "bad")
+         .addClass(next_term_shifts >= min_good_term ? "good" : "bad")
          );
       table.append(row);
     }
