@@ -12,6 +12,11 @@ TERM_LENGTH = datetime.timedelta(days=(7*4*6))
 
 class EtherCalcHelpers:
   @staticmethod
+  def get_int_from_cell(cell_contents):
+    try: return int(cell_contents)
+    except: return None
+
+  @staticmethod
   def get_date_from_cell(cell_contents):
     try: days_since_1900 = int(cell_contents)
     except: return None
@@ -86,16 +91,23 @@ class Shifts:
 
 class Terms:
   @staticmethod
-  def fetch_terms():
-    f = urllib2.urlopen(TERMS_CSV_URL)
+  def fetch_terms(csvfile_override=None):
+    f = None
+    if csvfile_override is None:
+      f = urllib2.urlopen(TERMS_CSV_URL)
+    else:
+      f = open(csvfile_override)
     rows = csv.reader(f)
     data = {}
     for row in rows:
       member = row[0]
       if len(member) != 0:
-        date = EtherCalcHelpers.get_date_from_cell(row[1])
-        if date:
-          data[member] = date
+        member_info = {
+          'join_date': EtherCalcHelpers.get_date_from_cell(row[1]),
+          'shares': EtherCalcHelpers.get_int_from_cell(row[2]),
+          }
+        if None not in member_info.values():
+          data[member] = member_info
     return data
 
   @staticmethod
