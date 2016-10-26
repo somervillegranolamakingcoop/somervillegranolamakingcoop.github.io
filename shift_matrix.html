@@ -123,7 +123,7 @@ tr.bad, td.bad {
     var member_idx = full_table_data['all_staff'].indexOf(member);
     var shift_counter = 0;
     for (row in full_table_data['data']) {
-      if (start <= full_table_data['data'][row]['date'] && full_table_data['data'][row]['date'] < end) {
+      if (start <= full_table_data['data'][row]['date'] && full_table_data['data'][row]['date'] <= end) {
         if (full_table_data['data'][row]['shifts'][member_idx] == '1') {
           shift_counter += 1;
         }
@@ -136,16 +136,16 @@ tr.bad, td.bad {
     for (member_idx in full_table_data['all_staff']) {
       var member_name = full_table_data['all_staff'][member_idx];
       var term_data = data[member_name];
-      var current_term_range = term_data['current_term'] + ' — ' + term_data['next_term'];
+      var current_term_range = term_data['current_term'] + ' — ' + term_data['current_term_end'];
       var current_term_shifts = count_shifts(
         member_name,
         term_data['current_term'],
-        term_data['next_term']);
-      var next_term_range = term_data['next_term'] + ' — ' + term_data['next_next_term'];
+        term_data['current_term_end']);
+      var next_term_range = term_data['next_term'] + ' — ' + term_data['next_term_end'];
       var next_term_shifts = count_shifts(
         member_name,
         term_data['next_term'],
-        term_data['next_next_term']);
+        term_data['next_term_end']);
       var row = $('<tr></tr>');
       row.append($('<td></td>').text(member_name + ' (' + term_data['shares'] + ')'));
       row.append($('<td></td>')
