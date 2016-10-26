@@ -15,6 +15,11 @@ for member, info in terms.iteritems():
   data[member]['start_date'] = info['join_date'].strftime('%F')
   data[member]['previous_term']  = (Terms.current_term_start(info['join_date']) - TERM_LENGTH).strftime('%F')
   data[member]['current_term']   = Terms.current_term_start(info['join_date']).strftime('%F')
-  data[member]['next_term']      = (Terms.current_term_start(info['join_date']) + TERM_LENGTH).strftime('%F')
+  data[member]['current_term_end'] = \
+    (Terms.current_term_start(info['join_date']) + TERM_LENGTH - datetime.timedelta(days=1)).strftime('%F')
+  data[member]['next_term'] = (Terms.current_term_start(info['join_date']) + TERM_LENGTH).strftime('%F')
+  data[member]['next_term_end'] = \
+    (Terms.current_term_start(info['join_date']) + 2*TERM_LENGTH - datetime.timedelta(days=1)).strftime('%F')
+  # deprecated
   data[member]['next_next_term'] = (Terms.current_term_start(info['join_date']) + 2*TERM_LENGTH).strftime('%F')
 print json.dumps(data)
