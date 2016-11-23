@@ -8,9 +8,20 @@ title: Documentation
 * TOC
 {:toc}
 
+Treasurer Instructions
+======================
+
+Renewal
+-------
+
+Ask members to renew 30 days prior to the end of their term.  Only after they
+are fully renewed, notify the shift manager.
+
+Administrator Instructions
+==========================
 
 Adding emails to the mailing list
-=================================
+---------------------------------
 
 If you are a group owner, and you need to add somebody to the SGMC mailing
 list, get their email address and add them directly:
