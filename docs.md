@@ -8,8 +8,19 @@ title: Documentation
 * TOC
 {:toc}
 
+Cook Instructions
+=================
+
+1. Go into the First Church Somerville basement (if you can't remember the access code, ask somebody!).
+1. In the kitchen, find the SGMC bin and the granola making instructions booklet.
+3. Identify all the ingredients, which are stored in the closet beneath the stairs.
+2. Check the <a href="/shift_matrix.html">shift matrix</a> to figure out how many pounds of granola to make (add up all the share amounts).
+3. Follow the printed instructions.
+
 Treasurer Instructions
 ======================
+
+Current Tresurer: Emily
 
 Renewal
 -------
@@ -17,8 +28,10 @@ Renewal
 Ask members to renew 30 days prior to the end of their term.  Only after they
 are fully renewed, notify the shift manager.
 
-Administrator Instructions
+IT Instructions
 ==========================
+
+Current IT: Troy, Sam
 
 Adding emails to the mailing list
 ---------------------------------
