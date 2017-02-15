@@ -50,9 +50,12 @@ class Shifts:
 
   @staticmethod
   def is_relevant(date):
+    """
+    A shift is only relevant if it is within one TERM_LENGTH from today
+    """
     today = datetime.date.today()
-    history_buffer = datetime.timedelta(weeks=12)
-    return date >= today - history_buffer
+    history_amount = TERM_LENGTH
+    return date >= today - history_amount
   
   @staticmethod
   def is_scheduled(shifts):
