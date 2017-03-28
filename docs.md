@@ -48,6 +48,11 @@ Onboarding
 Use this email template for new members:
 
 ```
+To: [NEW MEMBER NAME] <[NEW MEMBER EMAIL]>
+Cc: [TREASURER NAME] <[TREASURER EMAIL]>
+Subject: SGMC membership onboarding
+```
+```
 [NAME OF NEW MEMBER],
 
 Hi prospective granola coop member!  My role is Shift Manager, and I'm
