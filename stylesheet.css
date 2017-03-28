@@ -76,3 +76,18 @@ th, td {
   border: 1px solid black;
   padding: 3px;
 }
+
+/* styling for markdown code blocks: */
+pre {
+  white-space: pre;
+  white-space: -moz-pre;
+  white-space: -o-pre;
+  background: #fd9;
+  padding: 1em;
+  border: 1px solid #555;
+  font-size: 0.65em;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+pre code {
+  font-family: "Lucida Console", Monaco, monospace;
+}
