@@ -37,8 +37,10 @@ Renewal
 Ask members to renew 30 days prior to the end of their term.  Only after they
 are fully renewed, notify the shift manager.
 
-Shift manager
+Shift Manager
 =============
+
+Current Shift Manager: Troy
 
 Onboarding
 ----------
@@ -46,11 +48,11 @@ Onboarding
 Use this email template for new members:
 
 ```
-[NAME OF NEW MEMBER]
+[NAME OF NEW MEMBER],
 
 Hi prospective granola coop member!  My role is Shift Manager, and I'm
-responsible for onboarding.  Firstly, if you're interested in joining, please
-familiarize yourself with member responsibilities:
+responsible for onboarding.  Firstly, if you're interested in joining,
+please familiarize yourself with member responsibilities:
 
 http://somervillegranolamakingcoop.github.io/
 
@@ -58,16 +60,21 @@ fill out the application form:
 
 https://goo.gl/cPFnYr
 
-and deliver the completed form and check to First Church Somerville, 89 College
-Ave, Somerville, MA 02144.
+and deliver the completed form and check to First Church Somerville, 89
+College Ave, Somerville, MA 02144.
 
-Your prospective term is [INSERT DATE RANGE].  Please take a look at the shift
-matrix and request two cooking shifts in your current term:
+Your prospective term is [INSERT DATE RANGE].
+Please take a look at the shift matrix and request two cooking shifts in
+your term:
 
 http://somervillegranolamakingcoop.github.io/shift_matrix.html
 
-Let me know which two dates to add, and I'll put them in the database (respond
-to this email).
+The dates are also copied below:
+
+[PASTE 6 DATES FROM THE MATRIX HERE]
+
+Let me know which two dates you want (respond to this email), and I'll
+put them in the database.
 
 [YOUR NAME AND SIGNATURE]
 ```
