@@ -81,10 +81,11 @@ pre {
   white-space: pre;
   white-space: -moz-pre;
   white-space: -o-pre;
-  background: #fd9;
+  background: #e8c6a5;
   padding: 1em;
   border: 1px solid #555;
-  font-size: 0.65em;
+  font-size: 0.9em;
+  overflow: auto;
   font-family: "Lucida Console", Monaco, monospace;
 }
 pre code {
