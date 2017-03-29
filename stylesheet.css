@@ -32,8 +32,7 @@ body {
   font-size:2.5em;
 }
 #main{
-  /* height:850px; */
-  width:500px;
+  width:600px;
   display:block;
   margin-top:20px;
   margin-bottom:20px;
