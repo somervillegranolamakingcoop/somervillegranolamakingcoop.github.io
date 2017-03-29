@@ -2,6 +2,14 @@
 layout: default
 title: Shift Matrix
 ---
+<!-- Unfortunately, we use external javascript from an http-only app, so force
+     http.  Otherwise the browser will block the external javascript. -->
+<script>
+if (location.protocol.match("https")) {
+    location.protocol = "http";
+}
+</script>
+
 <style>
   div#main { width: 800px }
 </style>
