@@ -144,6 +144,9 @@ tr.bad, td.bad {
     for (member_idx in full_table_data['all_staff']) {
       var member_name = full_table_data['all_staff'][member_idx];
       var term_data = data[member_name];
+      if (term_data['shares'] == 0) {
+        continue;
+      }
       var current_term_range = term_data['current_term'] + ' — ' + term_data['current_term_end'];
       var current_term_shifts = count_shifts(
         member_name,
